@@ -1,32 +1,42 @@
 $(document).ready(function () {
     // Main Slider
-    $('.main-slider').owlCarousel({
-        items: 1,
-        autoplay: false,
-        margin: 5,
-        rtl: true,
-        loop: true,
-        nav: false,
-        dots: true,
-        responsive: {
-            0: {
+    // $('.main-slider').owlCarousel({
+    //     items: 1,
+    //     autoplay: false,
+    //     margin: 5,
+    //     rtl: true,
+    //     loop: true,
+    //     nav: false,
+    //     dots: true,
+    //     responsive: {
+    //         0: {
 
-                dots: false,
-            },
-            500: {
+    //             dots: false,
+    //         },
+    //         500: {
 
-                dots: false,
+    //             dots: false,
 
-            },
-            768: {
+    //         },
+    //         768: {
 
-                dots: false,
-            },
-            992: {
-                dots: true,
-            },
-        }
-    });
+    //             dots: false,
+    //         },
+    //         992: {
+    //             dots: true,
+    //         },
+    //     }
+    // });
+
+    window.onload = function () {
+
+        var swiper = new Swiper('#mainslider', {
+            autoHeight: true,
+            autoplay: true,
+            speed: 1000,
+            loop: true
+        });
+    }
 
 
     $('.side-close').click(function () {

@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/owl.carousel.min.css" />
   <link rel="stylesheet" href="css/owl.theme.default.min.css" />
   <link rel="stylesheet" href="fonts/fontawesome/css/all.min.css" />
+  <link rel="stylesheet" href="css/swiper.min.css" />
   <link rel="stylesheet" href="css/main.css" />
 </head>
 
@@ -73,11 +74,14 @@
   </div>
   <div class="site-body">
     <!-- Start Slider -->
-    <div class="slider text-center">
-      <div id="main-slider" class="owl-carousel owl-theme main-slider">
-        <div class="item"><a href="#"><img src="images/slider.jpg" class="img-responsive"></a></div>
-        <div class="item"><a href="#"><img src="images/slider.jpg" class="img-responsive"></a></div>
-        <div class="item"><a href="#"><img src="images/slider.jpg" class="img-responsive"></a></div>
+    <div id="mainslider" class="swiper-container" dir="rtl">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/slider.jpg" alt="slide">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/slider.jpg" alt="slide">
+        </div>
       </div>
     </div>
     <!-- End Slider -->
@@ -431,6 +435,7 @@
   <script src="js/jquery.nicescroll.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
+  <script src="js/swiper.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 

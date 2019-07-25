@@ -1,46 +1,89 @@
-.main-slider {
+// .main-slider {
+//     position: relative;
+//     width: 100%;
+
+//     .owl-dots {
+
+//         margin-top: 0;
+//         position: absolute;
+//         bottom: 35px;
+//         left: 50%;
+//         transform: translatex(-50%);
+
+//         @media (max-width: 991px) {
+//             bottom: 10px;
+//         }
+
+//         @media (max-width: 577px) {
+//             bottom: 5px;
+//         }
+
+
+//         .owl-dot {
+//             @extend %fix;
+
+//             span {
+//                 margin: 0 3px;
+//                 width: 9px;
+//                 height: 9px;
+//                 background-color: rgba(0, 0, 0, 0.5);
+//                 @include transition(all 0.3s ease-in-out);
+//             }
+
+//             &.active {
+//                 span {
+//                     background-color: rgba(255, 255, 255, 1);
+//                 }
+//             }
+
+//             &:hover {
+//                 span {
+//                     background-color: rgba(255, 255, 255, 1);
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+
+
+.swiper-container {
     position: relative;
+}
+
+.swiper-container img {
+    max-width: 100%;
     width: 100%;
+}
 
-    .owl-dots {
+.swiper-nav {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    display: flex;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 99999999;
+}
 
-        margin-top: 0;
-        position: absolute;
-        bottom: 35px;
-        left: 50%;
-        transform: translatex(-50%);
+.swiper-nav>div {
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    margin: 0 3px;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
 
-        @media (max-width: 991px) {
-            bottom: 10px;
-        }
-
-        @media (max-width: 577px) {
-            bottom: 5px;
-        }
-
-
-        .owl-dot {
-            @extend %fix;
-
-            span {
-                margin: 0 3px;
-                width: 9px;
-                height: 9px;
-                background-color: rgba(0, 0, 0, 0.5);
-                @include transition(all 0.3s ease-in-out);
-            }
-
-            &.active {
-                span {
-                    background-color: rgba(255, 255, 255, 1);
-                }
-            }
-
-            &:hover {
-                span {
-                    background-color: rgba(255, 255, 255, 1);
-                }
-            }
-        }
-    }
+.swiper-nav>div:hover {
+    background-color: #9e7c5e;
 }
