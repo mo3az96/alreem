@@ -1,0 +1,240 @@
+.side-close {
+    background-color: $maincolor;
+    position: fixed;
+    right: 295px;
+    top: 40px;
+    width: 27px;
+    height: 35px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    font-size: 10px;
+    color: $seccolor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 8888;
+    cursor: pointer;
+    @include transition(all 0.7s ease-in-out);
+
+    i {
+        @include transition(all 0.7s ease-in-out);
+    }
+}
+
+.side-bar {
+    height: 100%;
+    padding: 25px 19px 0;
+    background-color: $maincolor;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    width: 295px;
+    @include transition(all 0.7s ease-in-out);
+    z-index: 8888;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.lang {
+    background-color: #37318e;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    font-size: 14px;
+    color: $seccolor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 8888;
+    @include transition(all 0.7s ease-in-out);
+
+    &:hover {
+        color: $seccolor;
+    }
+}
+
+.user-icon {
+    display: flex;
+    margin: 20px 0 30px;
+    @include transition(all 0.7s ease-in-out);
+
+    a,
+    span {
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.149);
+        color: $seccolor;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 2px;
+        font-size: 14px;
+        cursor: pointer;
+
+        &:hover {
+            i {
+                animation: scale 1s linear infinite;
+            }
+        }
+    }
+
+}
+
+.links {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: auto;
+    @include transition(all 0.7s ease-in-out);
+}
+
+.link-li {
+    padding: 0 13px 9px;
+    border-bottom: 1px solid #37308e;
+    margin-bottom: 10px;
+    color: $seccolor;
+    font-size: 16px;
+
+    &:last-child {
+        border: none;
+    }
+}
+
+.link {
+    color: $seccolor;
+    font-size: 16px;
+    @include transition(all 0.3s ease-in-out);
+
+    &:focus,
+    &:active {
+        color: $seccolor;
+    }
+
+    &:hover {
+        color: #6963b6;
+    }
+
+}
+
+.drop-a {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    i {
+        color: #5a54b0;
+        font-size: 10px;
+        align-items: center;
+    }
+}
+
+.social {
+    display: flex;
+    margin-top: 38px;
+
+    a {
+        color: #7e79c9;
+        font-size: 16px;
+        margin: 0 7.5px;
+        @include transition(all 0.3s ease-in-out);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            color: $seccolor;
+        }
+    }
+}
+
+.copyrights {
+    margin: 23px 0;
+
+    p {
+        margin: 0;
+        color: #7e79c9;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2px;
+
+        img {
+            margin-right: 6px;
+        }
+    }
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    min-height: 250px;
+    overflow: hidden;
+    @include transition(all 0.7s ease-in-out);
+}
+
+#search {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: -260px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    @include transition(all 0.7s ease-in-out);
+
+    .searchbox {
+        position: relative;
+        height: 40px;
+    }
+
+    input {
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        color: #fff;
+        outline: none !important;
+        box-shadow: none !important;
+        border: none;
+        border-bottom: 1px solid #fff;
+        padding: 0 20px;
+        height: 100%;
+        @include transition(all 0.3s ease-in-out);
+
+        &:focus {
+            border-bottom: 1px solid #5a54b0;
+        }
+    }
+
+    button {
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: transparent;
+        outline: none !important;
+        box-shadow: none !important;
+        border: none;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        color: #fff;
+        @include transition(all 0.3s ease-in-out);
+
+        &:hover {
+            color: #7e79c9;
+        }
+    }
+}

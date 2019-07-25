@@ -1,0 +1,88 @@
+%sliderh1 {
+    font-size: 22px;
+    font-family: roman-bold;
+    color: $maincolor;
+    margin: 0;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: flex-end;
+
+    @media(max-width: 767px) {
+        justify-content: space-between;
+        font-size: 18px;
+    }
+
+    a {
+        font-size: 16px;
+        font-family: roman;
+        color: $seccolor;
+        @include transition(all 0.3s ease-in-out);
+
+        &:hover {
+            color: $maincolor;
+        }
+    }
+
+}
+
+%btnhover {
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    transition-property: color;
+    transition-duration: 0.3s;
+
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $maincolor;
+        border-radius: 25px;
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+        @include transition(-webkit-transform 0.3s ease-out);
+        @include transition(transform 0.3s ease-out);
+    }
+
+    &:hover {
+        border-color: $maincolor;
+
+        &:before {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+}
+
+// @extend %btnhover;
+
+
+%fix {
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+
+    &:hover {
+        text-decoration: none;
+        outline: none;
+        box-shadow: none;
+    }
+
+    &:focus {
+        text-decoration: none;
+        outline: none;
+        box-shadow: none;
+    }
+
+    &:active {
+        text-decoration: none;
+        outline: none;
+        box-shadow: none;
+    }
+
+}

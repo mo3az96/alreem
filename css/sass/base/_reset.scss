@@ -1,0 +1,41 @@
+body {
+    font-family: roman;
+}
+
+
+
+
+.fix {
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+
+    &:hover {
+        text-decoration: none;
+        outline: none;
+        box-shadow: none;
+    }
+
+    &:focus {
+        text-decoration: none;
+        outline: none;
+        box-shadow: none;
+    }
+
+    &:active {
+        text-decoration: none;
+        outline: none;
+        box-shadow: none;
+    }
+
+}
+
+
+*[class*="col-"] {
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+}
+
+.products {
+    margin: 0 -7.5px;
+}

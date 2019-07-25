@@ -1,0 +1,57 @@
+@import 'sass/helpers/variables';
+@import 'sass/helpers/mixins';
+@import 'sass/helpers/extends';
+
+@import 'sass/base/reset';
+@import 'sass/base/typography';
+@import 'sass/layout/header';
+@import 'sass/layout/sidebar';
+
+@import 'sass/components/navbar';
+@import 'sass/components/carousel';
+@import 'sass/components/accordion';
+
+@import 'sass/components/forms';
+@import 'sass/pages/home';
+@import 'sass/helpers/classes';
+
+
+.swiper-container {
+    position: relative;
+}
+
+.swiper-container img {
+    max-width: 100%;
+    width: 100%;
+}
+
+.swiper-nav {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    display: flex;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 99999999;
+}
+
+.swiper-nav>div {
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    margin: 0 3px;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+
+.swiper-nav>div:hover {
+    background-color: #9e7c5e;
+}

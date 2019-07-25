@@ -1,0 +1,56 @@
+.side-bar {
+
+    .accordion {
+        cursor: pointer;
+        width: 100%;
+        transition: 0.5s;
+
+
+        &:after {
+            content: '\002B';
+            color: #5a54b0;
+            // margin-left: 25px;
+            font-size: 10px;
+            float: left;
+        }
+
+        &.active {
+            color: #6963b6;
+
+            &:after {
+                content: "\2212";
+                color: #6963b6;
+            }
+        }
+
+        &:hover {
+            &:after {
+                color: #6963b6;
+            }
+        }
+    }
+
+    .panel {
+        padding: 0 15px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: transparent;
+        margin-bottom: 0;
+        z-index: 99999;
+    }
+
+}
+
+html[dir="ltr"] .side-bar {
+
+    .accordion {
+        &:after {
+
+            float: right;
+        }
+    }
+}
