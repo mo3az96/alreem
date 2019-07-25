@@ -13,16 +13,26 @@ $(document).ready(function () {
         });
     }
     $('.menu-btn').click(function () {
+        $('.xs-overlay').fadeIn(500);
         $('.side-bar').addClass('inscreen');
         $('.side-bar').removeClass('outscreen');
         $('.menu-btn').hide()
     });
-    $('.close-btn').click(function () {
+    $('.xs-overlay').click(function () {
+        $('.xs-overlay').fadeOut(500);
         $('.side-bar').addClass('outscreen');
         $('.side-bar').removeClass('inscreen');
         $('.menu-btn').show(200)
     });
-
+    $(".side-bar").click(function (e) {
+        e.stopPropagation();
+    });
+    $('.close-btn').click(function () {
+        $('.xs-overlay').fadeOut(500);
+        $('.side-bar').addClass('outscreen');
+        $('.side-bar').removeClass('inscreen');
+        $('.menu-btn').show(200)
+    });
     $('.side-close').click(function () {
         $("#mainslider").hide();
         $(".site-body").toggleClass("fixer");
@@ -65,7 +75,7 @@ $(document).ready(function () {
         cursoropacitymin: 0.5,
         cursoropacitymax: 1,
         cursorborderradius: 0,
-        railalign: 'left',
+        railalign: (document.dir == 'rtl') ? 'right' : 'left',
         zindex: 9999999999,
         horizrailenabled: false
     });
@@ -88,7 +98,7 @@ $(document).ready(function () {
         cursoropacitymin: 0,
         cursoropacitymax: 0.25,
         autohidemode: 'scroll',
-        railalign: 'right',
+        railalign: (document.dir == 'rtl') ? 'left' : 'right',
         hidecursordelay: 200,
         bouncescroll: false,
         scrollspeed: 120,
