@@ -656,6 +656,16 @@ html[dir=ltr] .site-body {
   }
 }
 
+html[dir=ltr] .latest-header {
+  padding-right: 30px;
+  padding-left: 0;
+}
+@media (max-width: 767px) {
+  html[dir=ltr] .latest-header {
+    padding: 0 15px;
+  }
+}
+
 .product {
   margin-top: 20px;
 }
@@ -764,6 +774,10 @@ html[dir=ltr] .product-img .tools {
   -o-transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+
+html[dir=ltr] .info {
+  text-align: left;
 }
 
 .infotxt {
