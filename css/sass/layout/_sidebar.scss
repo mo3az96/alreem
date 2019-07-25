@@ -19,9 +19,32 @@
     i {
         @include transition(all 0.7s ease-in-out);
     }
+
+    @media (max-width: 767px) {
+        display: none;
+    }
+
 }
 
+html[dir="ltr"] .side-close {
+    right: auto;
+    left: 295px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+
 .side-bar {
+    @media (max-width: 767px) {
+        right: -100%;
+    }
+
+    .side-wraper {
+        min-height: 100%;
+    }
+
     height: 100%;
     padding: 25px 19px 0;
     background-color: $maincolor;
@@ -36,7 +59,26 @@
     flex-direction: column;
 }
 
+html[dir="ltr"] .side-bar {
+    @media (max-width: 767px) {
+        left: -100%;
+        right: auto;
+    }
 
+    right: auto;
+    left: 0;
+
+}
+
+.logo {
+    img {
+        margin: 0 auto;
+
+        @media (max-width: 767px) {
+            width: 30%;
+        }
+    }
+}
 
 .lang {
     background-color: #37318e;
@@ -58,6 +100,11 @@
     &:hover {
         color: $seccolor;
     }
+}
+
+html[dir="ltr"] .lang {
+    right: auto;
+    left: 30px;
 }
 
 .user-icon {
@@ -83,6 +130,10 @@
             i {
                 animation: scale 1s linear infinite;
             }
+        }
+
+        @media (max-width: 767px) {
+            font-size: 20px;
         }
     }
 
@@ -111,6 +162,10 @@
     &:last-child {
         border: none;
     }
+
+    @media (max-width: 767px) {
+        font-size: 20px;
+    }
 }
 
 .link {
@@ -126,6 +181,7 @@
     &:hover {
         color: #6963b6;
     }
+
 
 }
 
@@ -144,6 +200,7 @@
 .social {
     display: flex;
     margin-top: 38px;
+    justify-content: center;
 
     a {
         color: #7e79c9;
@@ -156,6 +213,10 @@
 
         &:hover {
             color: $seccolor;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 20px;
         }
     }
 }
@@ -174,6 +235,13 @@
         img {
             margin-right: 6px;
         }
+    }
+}
+
+html[dir="ltr"] .copyrights {
+    img {
+        margin-left: 6px;
+        margin-right: 0;
     }
 }
 
@@ -237,4 +305,36 @@
             color: #7e79c9;
         }
     }
+}
+
+html[dir="ltr"] #search {
+    left: -260px;
+    right: 0;
+
+    button {
+
+        left: auto;
+        right: 0;
+
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    top: 15px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+
+    @media (max-width:767px) {
+        display: block;
+    }
+}
+
+html[dir="ltr"] .close-btn {
+    left: 0;
+    right: 30px;
 }

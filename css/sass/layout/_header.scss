@@ -1,0 +1,34 @@
+.logo-xs {
+    background-color: $maincolor;
+    display: none;
+    position: relative;
+
+    @media (max-width: 767px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 0;
+    }
+
+}
+
+.menu-btn {
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    color: #fff;
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    background-color: rgba($maincolor, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 999999;
+}
+
+html[dir="ltr"] .menu-btn {
+    right: auto;
+    left: 20px;
+}

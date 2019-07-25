@@ -1,45 +1,30 @@
 $(document).ready(function () {
-    // Main Slider
-    // $('.main-slider').owlCarousel({
-    //     items: 1,
-    //     autoplay: false,
-    //     margin: 5,
-    //     rtl: true,
-    //     loop: true,
-    //     nav: false,
-    //     dots: true,
-    //     responsive: {
-    //         0: {
-
-    //             dots: false,
-    //         },
-    //         500: {
-
-    //             dots: false,
-
-    //         },
-    //         768: {
-
-    //             dots: false,
-    //         },
-    //         992: {
-    //             dots: true,
-    //         },
-    //     }
-    // });
-
+    var swiper
     window.onload = function () {
 
-        var swiper = new Swiper('#mainslider', {
+        swiper = new Swiper('#mainslider', {
             autoHeight: true,
             autoplay: true,
             speed: 1000,
-            loop: true
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
         });
     }
-
+    $('.menu-btn').click(function () {
+        $('.side-bar').addClass('inscreen');
+        $('.side-bar').removeClass('outscreen');
+        $('.menu-btn').hide()
+    });
+    $('.close-btn').click(function () {
+        $('.side-bar').addClass('outscreen');
+        $('.side-bar').removeClass('inscreen');
+        $('.menu-btn').show(200)
+    });
 
     $('.side-close').click(function () {
+        $("#mainslider").hide();
         $(".site-body").toggleClass("fixer");
         $(".side-bar").toggleClass("side-fixer");
         $(".lang").toggleClass("lang-fixer");
@@ -52,6 +37,7 @@ $(document).ready(function () {
         $(".user-icon a").toggleClass("margin-fix");
         $(".user-icon span").toggleClass("margin-fix");
         $(this).toggleClass("side-close-fixer");
+        $("#mainslider").show();
     });
 
     var acc = document.getElementsByClassName("accordion");
@@ -85,6 +71,17 @@ $(document).ready(function () {
     });
 
     $(".side-bar").niceScroll({
+        // cursorcolor: "#000",
+        // cursorwidth: 10,
+        // cursorborder: 0,
+        // cursoropacitymin: 0,
+        // cursoropacitymax: 0.25,
+        // autohidemode: 'scroll',
+        // railalign: 'right',
+        // hidecursordelay: 200,
+        // bouncescroll: false,
+        // scrollspeed: 120,
+        // zindex: 9999999999
         cursorcolor: "#000",
         cursorwidth: 10,
         cursorborder: 0,
@@ -95,7 +92,7 @@ $(document).ready(function () {
         hidecursordelay: 200,
         bouncescroll: false,
         scrollspeed: 120,
-        zindex: 9999999999
+        horizrailenabled: false
     });
 
 
