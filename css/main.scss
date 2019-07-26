@@ -112,3 +112,9 @@ body::-webkit-scrollbar-track {
         display: none;
     }
 }
+
+html[dir="ltr"] .our-products {
+
+    right: auto;
+    left: 295px;
+}
