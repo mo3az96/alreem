@@ -1,19 +1,25 @@
 .xs-overlay {
     position: fixed;
-    width: 100%;
+    width: 295px;
     height: 100%;
     top: 0;
-    left: 0;
-    z-index: -1;
+    right: 0;
 
     @media (max-width: 767px) {
         background-color: rgba($maincolor, 0.5);
-        z-index: 20;
         display: none;
+        width: 100%;
     }
 }
 
+html[dir="ltr"] .xs-overlay {
+    right: auto;
+    left: 0;
+}
+
+
 .side-close {
+
     background-color: $maincolor;
     position: fixed;
     right: 295px;
@@ -58,8 +64,10 @@ html[dir="ltr"] .side-close {
 
     .side-wraper {
         min-height: 100%;
+        width: 100%;
     }
 
+    overflow-y: auto;
     height: 100%;
     padding: 25px 19px 0;
     background-color: $maincolor;

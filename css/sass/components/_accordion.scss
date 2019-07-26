@@ -33,6 +33,7 @@
 
     .panel {
         padding: 0 15px;
+        padding-left: 0;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.5s ease-out;
@@ -53,5 +54,10 @@ html[dir="ltr"] .side-bar {
 
             float: right;
         }
+    }
+
+    .panel {
+        padding: 0 15px;
+        padding-right: 0;
     }
 }

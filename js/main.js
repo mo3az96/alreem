@@ -16,13 +16,15 @@ $(document).ready(function () {
         $('.xs-overlay').fadeIn(500);
         $('.side-bar').addClass('inscreen');
         $('.side-bar').removeClass('outscreen');
-        $('.menu-btn').hide()
+        $('.menu-btn').hide();
+        $('body').css("overflow", "hidden");
     });
     $('.xs-overlay').click(function () {
         $('.xs-overlay').fadeOut(500);
         $('.side-bar').addClass('outscreen');
         $('.side-bar').removeClass('inscreen');
-        $('.menu-btn').show(200)
+        $('.menu-btn').show(200);
+        $('body').css("overflow", "auto");
     });
     $(".side-bar").click(function (e) {
         e.stopPropagation();
@@ -31,12 +33,14 @@ $(document).ready(function () {
         $('.xs-overlay').fadeOut(500);
         $('.side-bar').addClass('outscreen');
         $('.side-bar').removeClass('inscreen');
-        $('.menu-btn').show(200)
+        $('.menu-btn').show(200);
+        $('body').css("overflow", "auto");
     });
     $('.side-close').click(function () {
         $("#mainslider").hide();
         $(".site-body").toggleClass("fixer");
         $(".side-bar").toggleClass("side-fixer");
+        $(".xs-overlay").toggleClass("side-fixer");
         $(".lang").toggleClass("lang-fixer");
         $(".card").toggleClass("display-fix");
         $(".logo").toggleClass("display-fix");
@@ -66,45 +70,6 @@ $(document).ready(function () {
             }
         });
     }
-
-
-    $("body").niceScroll({
-        cursorcolor: "#2e2883",
-        cursorwidth: 8,
-        cursorborder: 0,
-        cursoropacitymin: 0.5,
-        cursoropacitymax: 1,
-        cursorborderradius: 0,
-        railalign: (document.dir == 'rtl') ? 'right' : 'left',
-        zindex: 9999999999,
-        horizrailenabled: false
-    });
-
-    $(".side-bar").niceScroll({
-        // cursorcolor: "#000",
-        // cursorwidth: 10,
-        // cursorborder: 0,
-        // cursoropacitymin: 0,
-        // cursoropacitymax: 0.25,
-        // autohidemode: 'scroll',
-        // railalign: 'right',
-        // hidecursordelay: 200,
-        // bouncescroll: false,
-        // scrollspeed: 120,
-        // zindex: 9999999999
-        cursorcolor: "#000",
-        cursorwidth: 10,
-        cursorborder: 0,
-        cursoropacitymin: 0,
-        cursoropacitymax: 0.25,
-        autohidemode: 'scroll',
-        railalign: (document.dir == 'rtl') ? 'left' : 'right',
-        hidecursordelay: 200,
-        bouncescroll: false,
-        scrollspeed: 120,
-        horizrailenabled: false
-    });
-
 
     $('.search-btn').click(function () {
         if ($(".links").hasClass('menu-out')) {

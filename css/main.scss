@@ -16,42 +16,37 @@
 @import 'sass/helpers/classes';
 
 
-.swiper-container {
-    position: relative;
+body::-webkit-scrollbar {
+    background-color: transparent;
+    width: 8px;
 }
 
-.swiper-container img {
-    max-width: 100%;
-    width: 100%;
+body::-webkit-scrollbar-thumb {
+    background-color: rgba($maincolor, 0.5);
+
+    &:hover {
+        background-color: rgba($maincolor, 1);
+    }
 }
 
-.swiper-nav {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    display: flex;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    transform: translateX(-50%);
-    z-index: 99999999;
+body::-webkit-scrollbar-track {
+    background-color: transparent;
 }
 
-.swiper-nav>div {
-    width: 34px;
-    height: 34px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    margin: 0 3px;
-    -webkit-transition: 0.3s ease;
-    -o-transition: 0.3s ease;
-    transition: 0.3s ease;
+
+.side-bar::-webkit-scrollbar {
+    background-color: transparent;
+    width: 5px;
 }
 
-.swiper-nav>div:hover {
-    background-color: #9e7c5e;
+.side-bar::-webkit-scrollbar-thumb {
+    background-color: rgba(#6963b6, 0.5);
+
+    &:hover {
+        background-color: #6963b6;
+    }
+}
+
+.side-bar::-webkit-scrollbar-track {
+    background-color: transparent;
 }
