@@ -282,4 +282,7 @@ html[dir="ltr"] .fixer {
 .height-fix {
     min-height: 350px;
 
+    @media(max-width: 767px) {
+        min-height: 400px;
+    }
 }

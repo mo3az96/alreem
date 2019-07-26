@@ -171,7 +171,7 @@ html[dir=ltr] .side-close {
   }
 }
 .side-bar .side-wraper {
-  min-height: 100%;
+  min-height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -195,7 +195,7 @@ html[dir=ltr] .side-bar {
 }
 @media (max-width: 767px) {
   .logo img {
-    width: 30%;
+    width: 50%;
   }
 }
 
@@ -219,8 +219,8 @@ html[dir=ltr] .side-bar {
   -webkit-transition: all 0.7s ease-in-out;
   transition: all 0.7s ease-in-out;
 }
-.lang:hover {
-  color: #fff;
+.lang:hover, .lang:active, .lang:focus {
+  color: #d2a138;
 }
 
 html[dir=ltr] .lang {
@@ -254,6 +254,7 @@ html[dir=ltr] .lang {
 .user-icon a:hover i,
 .user-icon span:hover i {
   animation: scale 1s linear infinite;
+  color: #d2a138;
 }
 @media (max-width: 767px) {
   .user-icon a,
@@ -306,7 +307,7 @@ html[dir=ltr] .lang {
   color: #fff;
 }
 .link:hover {
-  color: #6963b6;
+  color: #d2a138;
 }
 
 .drop-a {
@@ -542,20 +543,20 @@ html[dir=ltr] .close-btn {
 }
 .side-bar .accordion:after {
   content: "+";
-  color: #fff;
+  color: #6963b6;
   font-size: 18px;
   float: left;
   font-weight: bold;
 }
 .side-bar .accordion.active {
-  color: #6963b6;
+  color: #d2a138;
 }
 .side-bar .accordion.active:after {
   content: "−";
-  color: #6963b6;
+  color: #d2a138;
 }
 .side-bar .accordion:hover:after {
-  color: #6963b6;
+  color: #d2a138;
 }
 .side-bar .panel {
   padding: 0 15px;
@@ -1190,6 +1191,11 @@ html[dir=ltr] .fixer {
 
 .height-fix {
   min-height: 350px;
+}
+@media (max-width: 767px) {
+  .height-fix {
+    min-height: 400px;
+  }
 }
 
 body::-webkit-scrollbar {

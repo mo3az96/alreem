@@ -8,7 +8,7 @@
 
         &:after {
             content: '\002B';
-            color: #fff;
+            color: #6963b6;
             // margin-left: 25px;
             font-size: 18px;
             float: left;
@@ -16,17 +16,17 @@
         }
 
         &.active {
-            color: #6963b6;
+            color: #d2a138;
 
             &:after {
                 content: "\2212";
-                color: #6963b6;
+                color: #d2a138;
             }
         }
 
         &:hover {
             &:after {
-                color: #6963b6;
+                color: #d2a138;
             }
         }
     }

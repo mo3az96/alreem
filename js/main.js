@@ -41,8 +41,7 @@ $(document).ready(function () {
             if (typeof swiper !== 'undefined') {
                 swiper.update();
             }
-        }, 500);
-        $("#mainslider").hide();
+        }, 700);
         $(".site-body").toggleClass("fixer");
         $(".side-bar").toggleClass("side-fixer");
         $(".xs-overlay").toggleClass("side-fixer");
