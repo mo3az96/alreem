@@ -4,7 +4,7 @@ $(document).ready(function () {
 
         swiper = new Swiper('#mainslider', {
             autoHeight: true,
-            autoplay: true,
+            autoplay: false,
             speed: 1000,
             loop: true,
             pagination: {
@@ -37,6 +37,11 @@ $(document).ready(function () {
         $('body').css("overflow", "auto");
     });
     $('.side-close').click(function () {
+        setTimeout(function () {
+            if (typeof swiper !== 'undefined') {
+                swiper.update();
+            }
+        }, 500);
         $("#mainslider").hide();
         $(".site-body").toggleClass("fixer");
         $(".side-bar").toggleClass("side-fixer");

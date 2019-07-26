@@ -17,20 +17,21 @@
 
 
 body::-webkit-scrollbar {
-    background-color: transparent;
+    background-color: rgba($maincolor, 0.2);
     width: 8px;
 }
 
 body::-webkit-scrollbar-thumb {
     background-color: rgba($maincolor, 0.5);
+    border-radius: 25px;
 
     &:hover {
-        background-color: rgba($maincolor, 1);
+        background-color: rgba($maincolor, 0.7);
     }
 }
 
 body::-webkit-scrollbar-track {
-    background-color: transparent;
+    background-color: rgba($maincolor, 0.2);
 }
 
 
@@ -41,6 +42,8 @@ body::-webkit-scrollbar-track {
 
 .side-bar::-webkit-scrollbar-thumb {
     background-color: rgba(#6963b6, 0.5);
+
+    border-radius: 25px;
 
     &:hover {
         background-color: #6963b6;
