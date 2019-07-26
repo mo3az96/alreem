@@ -1296,5 +1296,10 @@ body::-webkit-scrollbar-track {
 .cat:hover img {
   transform: scale(1.1);
 }
+@media (max-width: 767px) {
+  .cat {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

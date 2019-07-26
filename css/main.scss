@@ -107,4 +107,8 @@ body::-webkit-scrollbar-track {
             transform: scale(1.1);
         }
     }
+
+    @media(max-width: 767px) {
+        display: none;
+    }
 }
