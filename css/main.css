@@ -595,6 +595,12 @@ html[dir=ltr] .site-body {
   padding-right: 0;
   padding-left: 295px;
 }
+@media (max-width: 767px) {
+  html[dir=ltr] .site-body {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
 
 .services {
   display: flex;
