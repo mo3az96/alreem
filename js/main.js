@@ -102,12 +102,10 @@ $(document).ready(function () {
         $(".side-close").removeClass("side-close-fixer");
     });
 
-
-
-    //unifying Product box height
-    $('.prodimg').each(function () {
-        var w = $('.prodimg').width();
-        $('.prodimg').height(w);
+    $(".mega-product-btn").hover(function () {
+        $(".our-products").toggleClass("cat-fix");
     });
-
+    $(".our-products").hover(function () {
+        $(".our-products").toggleClass("cat-fix");
+    });
 });

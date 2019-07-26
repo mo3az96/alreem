@@ -1198,6 +1198,11 @@ html[dir=ltr] .fixer {
   }
 }
 
+.cat-fix {
+  width: 1040px !important;
+  opacity: 1 !important;
+}
+
 body::-webkit-scrollbar {
   background-color: rgba(46, 40, 131, 0.2);
   width: 8px;
@@ -1230,6 +1235,66 @@ body::-webkit-scrollbar-track {
 
 .side-bar::-webkit-scrollbar-track {
   background-color: transparent;
+}
+
+.our-products {
+  position: absolute;
+  right: 295px;
+  width: 0;
+  opacity: 0;
+  background-color: #f7f7f7;
+  z-index: 99999;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 10px 5px;
+  top: 200px;
+  -moz-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+
+.cat {
+  margin: 0 10px 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 16px;
+  color: #2e2883;
+  -moz-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  overflow: hidden;
+}
+.cat .cat-img {
+  border: 1px solid #ededed;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  -moz-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+.cat img {
+  width: 100%;
+  height: 100%;
+  -moz-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+.cat:hover {
+  color: #d2a138;
+}
+.cat:hover .cat-img {
+  border: 1px solid #d2a138;
+}
+.cat:hover img {
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=main.css.map */
