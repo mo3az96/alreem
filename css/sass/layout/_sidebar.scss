@@ -4,6 +4,7 @@
     height: 100%;
     top: 0;
     right: 0;
+    z-index: 20;
 
     @media (max-width: 767px) {
         background-color: rgba($maincolor, 0.5);
