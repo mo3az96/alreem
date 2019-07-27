@@ -7,7 +7,7 @@
     z-index: 20;
 
     @media (max-width: 767px) {
-        background-color: rgba($maincolor, 0.5);
+        background-color: rgba(0, 0, 0, 0.5);
         display: none;
         width: 100%;
     }
@@ -128,7 +128,8 @@ html[dir="ltr"] .side-bar {
     &:hover,
     &:active,
     &:focus {
-        color: #d2a138;
+        background-color: #fff;
+        color: $maincolor;
     }
 }
 
@@ -158,9 +159,11 @@ html[dir="ltr"] .lang {
         cursor: pointer;
 
         &:hover {
+            background-color: #fff;
+
             i {
                 animation: scale 1s linear infinite;
-                color: #d2a138;
+                color: $maincolor;
             }
         }
 
@@ -259,7 +262,7 @@ html[dir="ltr"] .lang {
     p {
         margin: 0;
         color: #7e79c9;
-        font-size: 16px;
+        font-size: 12px;
         display: flex;
         justify-content: center;
         margin-bottom: 2px;
@@ -304,17 +307,21 @@ html[dir="ltr"] .copyrights {
         width: 100%;
         border: none;
         background-color: transparent;
-        color: #fff;
+        color: #7e79c9;
         outline: none !important;
         box-shadow: none !important;
         border: none;
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid #5a54b0;
         padding: 0 20px;
         height: 100%;
         @include transition(all 0.3s ease-in-out);
 
+        &::placeholder {
+            color: #7e79c9;
+        }
+
         &:focus {
-            border-bottom: 1px solid #5a54b0;
+            border-bottom: 1px solid #fff;
         }
     }
 
@@ -339,9 +346,6 @@ html[dir="ltr"] .copyrights {
 }
 
 html[dir="ltr"] #search {
-    left: -260px;
-    right: 0;
-
     button {
 
         left: auto;
@@ -366,6 +370,21 @@ html[dir="ltr"] #search {
 }
 
 html[dir="ltr"] .close-btn {
-    left: 0;
+    left: auto;
     right: 30px;
+}
+
+.dropitem {
+    color: #aba7ec;
+    @include transition(all 0.3s ease-in-out);
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+.droplinks {
+    li {
+        margin: 5px 0;
+    }
 }

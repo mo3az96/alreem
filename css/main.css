@@ -93,7 +93,7 @@ html[dir=ltr] .menu-btn {
 }
 @media (max-width: 767px) {
   .xs-overlay {
-    background-color: rgba(46, 40, 131, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     display: none;
     width: 100%;
   }
@@ -219,7 +219,8 @@ html[dir=ltr] .side-bar {
   transition: all 0.7s ease-in-out;
 }
 .lang:hover, .lang:active, .lang:focus {
-  color: #d2a138;
+  background-color: #fff;
+  color: #2e2883;
 }
 
 html[dir=ltr] .lang {
@@ -250,10 +251,14 @@ html[dir=ltr] .lang {
   font-size: 14px;
   cursor: pointer;
 }
+.user-icon a:hover,
+.user-icon span:hover {
+  background-color: #fff;
+}
 .user-icon a:hover i,
 .user-icon span:hover i {
   animation: scale 1s linear infinite;
-  color: #d2a138;
+  color: #2e2883;
 }
 @media (max-width: 767px) {
   .user-icon a,
@@ -352,7 +357,7 @@ html[dir=ltr] .lang {
 .copyrights p {
   margin: 0;
   color: #7e79c9;
-  font-size: 16px;
+  font-size: 12px;
   display: flex;
   justify-content: center;
   margin-bottom: 2px;
@@ -398,11 +403,11 @@ html[dir=ltr] .copyrights img {
   width: 100%;
   border: none;
   background-color: transparent;
-  color: #fff;
+  color: #7e79c9;
   outline: none !important;
   box-shadow: none !important;
   border: none;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #5a54b0;
   padding: 0 20px;
   height: 100%;
   -moz-transition: all 0.3s ease-in-out;
@@ -410,8 +415,11 @@ html[dir=ltr] .copyrights img {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+#search input::placeholder {
+  color: #7e79c9;
+}
 #search input:focus {
-  border-bottom: 1px solid #5a54b0;
+  border-bottom: 1px solid #fff;
 }
 #search button {
   top: 0;
@@ -434,10 +442,6 @@ html[dir=ltr] .copyrights img {
   color: #7e79c9;
 }
 
-html[dir=ltr] #search {
-  left: -260px;
-  right: 0;
-}
 html[dir=ltr] #search button {
   left: auto;
   right: 0;
@@ -460,8 +464,23 @@ html[dir=ltr] #search button {
 }
 
 html[dir=ltr] .close-btn {
-  left: 0;
+  left: auto;
   right: 30px;
+}
+
+.dropitem {
+  color: #aba7ec;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.dropitem:hover {
+  color: #fff;
+}
+
+.droplinks li {
+  margin: 5px 0;
 }
 
 .swiper-container {
@@ -1252,10 +1271,10 @@ body::-webkit-scrollbar-track {
   padding: 20px 10px 5px;
   top: 200px;
   overflow: hidden;
-  -moz-transition: all 0.7s ease-in-out;
-  -o-transition: all 0.7s ease-in-out;
-  -webkit-transition: all 0.7s ease-in-out;
-  transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 @media (max-width: 992px) {
   .our-products {
