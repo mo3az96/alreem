@@ -99,6 +99,31 @@ $(document).ready(function () {
         $(".side-close").removeClass("side-close-fixer");
     });
 
+    $('#backbtn').click(function () {
+        if ($(".links").hasClass('menu-out')) {
+            $(".links").removeClass("menu-out");
+            $("#search").removeClass("search-in");
+            $(".links").addClass("menu-in");
+            $("#search").addClass("search-out");
+        } else {
+            $(".links").addClass("menu-out");
+            $("#search").addClass("search-in");
+            $(".links").removeClass("menu-in");
+            $("#search").removeClass("search-out");
+        }
+        $(".site-body").removeClass("fixer");
+        $(".side-bar").removeClass("side-fixer");
+        $(".card").removeClass("display-fix");
+        $(".logo").removeClass("display-fix");
+        $(".copyrights").removeClass("display-fix");
+        $(".social").removeClass("display-flex-fix");
+        $(".user-icon").removeClass("display-flex-fix");
+        $(".social a").removeClass("margin-fix");
+        $(".user-icon a").removeClass("margin-fix");
+        $(".user-icon span").removeClass("margin-fix");
+        $(".side-close").removeClass("side-close-fixer");
+    });
+
     if ($(window).width() < 992) {
         $(".cats").addClass("panel");
     } else {

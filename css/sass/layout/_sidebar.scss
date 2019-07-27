@@ -294,7 +294,7 @@ html[dir="ltr"] .copyrights {
     right: -260px;
     height: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     padding-top: 50px;
     @include transition(all 0.7s ease-in-out);
 
@@ -325,7 +325,7 @@ html[dir="ltr"] .copyrights {
         }
     }
 
-    button {
+    .search-btn {
         top: 0;
         left: 0;
         position: absolute;
@@ -386,5 +386,40 @@ html[dir="ltr"] .close-btn {
 .droplinks {
     li {
         margin: 5px 0;
+    }
+}
+
+.backtonav {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    font-size: 15px;
+    margin-top: 50px;
+}
+
+#backbtn {
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.149);
+    color: $seccolor;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    margin-bottom: 10px;
+
+    &:hover {
+        background-color: #fff;
+
+        i {
+            animation: scale 1s linear infinite;
+            color: $maincolor;
+        }
     }
 }
