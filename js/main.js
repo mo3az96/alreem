@@ -63,7 +63,6 @@ $(document).ready(function () {
 
     for (i = 0; i < acc.length; i++) {
         acc[i].addEventListener("click", function () {
-            $(".card").toggleClass("height-fix");
             this.classList.toggle("active");
             var panel = this.nextElementSibling;
             if (panel.style.maxHeight) {
@@ -77,12 +76,10 @@ $(document).ready(function () {
 
     $('.search-btn').click(function () {
         if ($(".links").hasClass('menu-out')) {
-
             $(".links").removeClass("menu-out");
             $("#search").removeClass("search-in");
             $(".links").addClass("menu-in");
             $("#search").addClass("search-out");
-            console.log("123")
         } else {
             $(".links").addClass("menu-out");
             $("#search").addClass("search-in");
@@ -106,6 +103,13 @@ $(document).ready(function () {
         $(".our-products").toggleClass("cat-fix");
     });
     $(".our-products").hover(function () {
-        $(".our-products").toggleClass("cat-fix");
+        $(".our-products").addClass("cat-fix");
+        $('.mega-product-btn a').css("color", "#d2a138");
+        $('.mega-product-btn i').css("color", "#d2a138");
+
+    }, function () {
+        $(".our-products").removeClass("cat-fix");
+        $('.mega-product-btn a').css("color", "#fff");
+        $('.mega-product-btn i').css("color", "#5a54b0");
     });
 });

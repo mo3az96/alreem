@@ -4,28 +4,29 @@
         cursor: pointer;
         width: 100%;
         transition: 0.5s;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
 
-        &:after {
-            content: '\002B';
+        i {
             color: #6963b6;
             // margin-left: 25px;
-            font-size: 18px;
-            float: left;
-            font-weight: bold;
+            font-size: 10px;
+            @include transition(all 0.5s ease-in-out);
         }
 
         &.active {
             color: #d2a138;
 
-            &:after {
-                content: "\2212";
+            i {
                 color: #d2a138;
+                transform: rotate(-90deg);
             }
         }
 
         &:hover {
-            &:after {
+            i {
                 color: #d2a138;
             }
         }
@@ -50,9 +51,11 @@
 html[dir="ltr"] .side-bar {
 
     .accordion {
-        &:after {
+        &.active {
 
-            float: right;
+            i {
+                transform: rotate(90deg);
+            }
         }
     }
 
