@@ -1339,7 +1339,7 @@ html[dir=ltr] .our-products {
 .mega-product-btn:hover i {
   color: #d2a138;
 }
-.mega-product-btn:hover a.link {
+.mega-product-btn:hover .link-li a.link {
   color: #d2a138;
 }
 
