@@ -99,17 +99,21 @@ $(document).ready(function () {
         $(".side-close").removeClass("side-close-fixer");
     });
 
-    $(".mega-product-btn").hover(function () {
-        $(".our-products").toggleClass("cat-fix");
-    });
-    $(".our-products").hover(function () {
-        $(".our-products").addClass("cat-fix");
-        $('.mega-product-btn a').css("color", "#d2a138");
-        $('.mega-product-btn i').css("color", "#d2a138");
+    if ($(window).width() < 992) {
+        $(".cats").addClass("panel");
+    } else {
+        $(".mega-product-btn").hover(function () {
+            $(".our-products").toggleClass("cat-fix");
+        });
+        $(".our-products").hover(function () {
+            $(".our-products").addClass("cat-fix");
+            $('.mega-product-btn a').css("color", "#d2a138");
+            $('.mega-product-btn i').css("color", "#d2a138");
 
-    }, function () {
-        $(".our-products").removeClass("cat-fix");
-        $('.mega-product-btn a').css("color", "#fff");
-        $('.mega-product-btn i').css("color", "#5a54b0");
-    });
+        }, function () {
+            $(".our-products").removeClass("cat-fix");
+            $('.mega-product-btn a').css("color", "#fff");
+            $('.mega-product-btn i').css("color", "#5a54b0");
+        });
+    }
 });

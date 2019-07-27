@@ -1,3 +1,9 @@
+.mega-product-btn {
+    .cats {
+        display: none;
+    }
+}
+
 .side-bar {
 
     .accordion {
@@ -44,6 +50,7 @@
         background-color: transparent;
         margin-bottom: 0;
         z-index: 99999;
+        display: block;
     }
 
 }
