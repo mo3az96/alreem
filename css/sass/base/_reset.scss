@@ -39,3 +39,13 @@ body {
 .products {
     margin: 0 -7.5px;
 }
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: rgba($maincolor, 0.5) rgba($maincolor, 0.2);
+}
+
+.side-bar {
+    scrollbar-width: thin;
+    scrollbar-color: transparent rgba(#6963b6, 0.5);
+}

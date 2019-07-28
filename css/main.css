@@ -32,6 +32,16 @@ body {
   margin: 0 -7.5px;
 }
 
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(46, 40, 131, 0.5) rgba(46, 40, 131, 0.2);
+}
+
+.side-bar {
+  scrollbar-width: thin;
+  scrollbar-color: transparent rgba(105, 99, 182, 0.5);
+}
+
 @font-face {
   font-family: "roman";
   src: url("../fonts/frutiger/FrutigerLTArabic-55Roman.ttf");
@@ -259,6 +269,10 @@ html[dir=ltr] .lang {
 .user-icon span:hover i {
   animation: scale 1s linear infinite;
   color: #2e2883;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 @media (max-width: 767px) {
   .user-icon a,
@@ -1253,7 +1267,7 @@ html[dir=ltr] .fixer {
 }
 
 .cat-fix {
-  width: 1040px !important;
+  right: 295px !important;
   opacity: 1 !important;
 }
 
@@ -1293,8 +1307,8 @@ body::-webkit-scrollbar-track {
 
 .our-products {
   position: absolute;
-  right: 295px;
-  width: 0;
+  right: -1040px;
+  width: 1040px;
   opacity: 0;
   background-color: #f7f7f7;
   z-index: -1;
@@ -1304,10 +1318,10 @@ body::-webkit-scrollbar-track {
   padding: 20px 0 5px;
   top: 200px;
   overflow: hidden;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 @media (max-width: 992px) {
   .our-products {

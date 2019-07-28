@@ -164,6 +164,7 @@ html[dir="ltr"] .lang {
             i {
                 animation: scale 1s linear infinite;
                 color: $maincolor;
+                @include transition(all 0.5s ease-in-out);
             }
         }
 
