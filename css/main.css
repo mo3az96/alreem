@@ -1315,7 +1315,7 @@ body::-webkit-scrollbar-track {
   height: auto;
   display: flex;
   flex-wrap: wrap;
-  padding: 20px 0 5px;
+  padding: 20px 10px 5px;
   top: 200px;
   overflow: hidden;
   -moz-transition: all 0.7s ease-in-out;
