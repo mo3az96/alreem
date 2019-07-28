@@ -74,6 +74,12 @@ body::-webkit-scrollbar-track {
     }
 }
 
+html[dir="ltr"] .our-products {
+    right: auto;
+    left: -1040px;
+    opacity: 1;
+}
+
 .cat {
 
     margin: 0 10px 35px;
@@ -117,12 +123,6 @@ body::-webkit-scrollbar-track {
             transform: scale(1.1);
         }
     }
-}
-
-html[dir="ltr"] .our-products {
-
-    right: auto;
-    left: 295px;
 }
 
 .mega-product-btn {

@@ -1271,6 +1271,12 @@ html[dir=ltr] .fixer {
   opacity: 1 !important;
 }
 
+html[dir=ltr] .cat-fix {
+  left: 295px !important;
+  right: auto !important;
+  opacity: 1 !important;
+}
+
 body::-webkit-scrollbar {
   background-color: rgba(46, 40, 131, 0.2);
   width: 8px;
@@ -1329,6 +1335,12 @@ body::-webkit-scrollbar-track {
   }
 }
 
+html[dir=ltr] .our-products {
+  right: auto;
+  left: -1040px;
+  opacity: 1;
+}
+
 .cat {
   margin: 0 10px 35px;
   display: flex;
@@ -1373,11 +1385,6 @@ body::-webkit-scrollbar-track {
 }
 .cat:hover img {
   transform: scale(1.1);
-}
-
-html[dir=ltr] .our-products {
-  right: auto;
-  left: 295px;
 }
 
 .mega-product-btn {
